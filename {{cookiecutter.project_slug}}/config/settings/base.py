@@ -105,15 +105,16 @@ ADMINS = [
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
-# DATABASE CONFIGURATION
-# ------------------------------------------------------------------------------
+########## DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}'),
+DATABASES = values.DatabaseURLValue('mysql://root:@127.0.0.1/{{cookiecutter.repo_name}}', engine='django_mysqlpool.backends.mysqlpool')
+# DATABASES['default']['ENGINE'] = 'django_mysqlpool.backends.mysqlpool'
+
+SOUTH_DATABASE_ADAPTERS = {
+    'default': "south.db.mysql"
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
-
-
+########## END DATABASE CONFIGURATION
+    
 # GENERAL CONFIGURATION
 # ------------------------------------------------------------------------------
 # Local time zone for this installation. Choices can be found here:
