@@ -21,6 +21,7 @@
     "mysql_user": "root",
     "mysql_password": "password",
     "mysql_host": "localhost",
+    "postgresql_version": ["9.6", "9.5", "9.4", "9.3", "9.2"],
     "mysql_database": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
     "js_task_runner": ["Gulp", "Grunt", "None"],
     "custom_bootstrap_compilation": "n",
