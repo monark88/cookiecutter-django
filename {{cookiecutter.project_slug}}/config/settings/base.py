@@ -107,7 +107,7 @@ MANAGERS = ADMINS
 
 ########## DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = values.DatabaseURLValue('mysql://root:@127.0.0.1/{{cookiecutter.repo_name}}', engine='django_mysqlpool.backends.mysqlpool')
+DATABASES = values.DatabaseURLValue('mysql://root:@127.0.0.1/{{cookiecutter.project_slug}}', engine='django_mysqlpool.backends.mysqlpool')
 # DATABASES['default']['ENGINE'] = 'django_mysqlpool.backends.mysqlpool'
 
 SOUTH_DATABASE_ADAPTERS = {
