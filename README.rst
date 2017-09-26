@@ -12,6 +12,10 @@ Cookiecutter Django
 .. image:: https://badges.gitter.im/Join Chat.svg
     :target: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
+Fork info
+---------
+Need my.cnf file located in ~ of user running cookiecutter, with root ( :( ) credentials for now.. 
+
 Powered by Cookiecutter_, Cookiecutter Django is a framework for jumpstarting
 production-ready Django projects quickly.
 
